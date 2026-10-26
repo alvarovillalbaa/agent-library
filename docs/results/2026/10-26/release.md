@@ -38,6 +38,6 @@ Two complete live model responses were observed in the rejection/revision sequen
 
 ## Open proof boundaries
 
-The browser-control skill's supported upload troubleshooting requires enabling file-URL access for the ChatGPT Chrome extension. No alternate browser mechanism or file-upload workaround was used. Native file/folder upload, direct rendering/copying of a fresh rejected-model report in the browser, cross-browser behavior, assistive-technology coverage, rate-limit exhaustion and concurrent submission behavior remain unverified. Backend report contents and repair prompt are preserved in the live HTTP receipt; the browser's live action check covered exact-package deduplication.
+The browser-control skill's supported upload troubleshooting requires enabling file-URL access for the ChatGPT Chrome extension. No alternate browser mechanism or file-upload workaround was used. Native file/folder upload, cross-browser behavior, assistive-technology coverage, rate-limit exhaustion and concurrent submission behavior remain unverified. The initial browser action checked exact-package deduplication; the later [Meeting handoff browser acceptance](meeting-handoff-browser.md) separately proves a fresh rejected-model report, exact repair-prompt copying, edited resubmission, eight-check approval, public detail and full-content copying after publication.
 
 Initial source/production snapshots and later evidence-only commits are distinct. A subsequent documentation deployment does not change the runtime proof scope recorded here.
