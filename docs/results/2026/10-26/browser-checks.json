@@ -1,6 +1,6 @@
 {
   "url": "https://agent-library-rust.vercel.app/",
-  "observedAt": "2026-10-26T17:30:25.619Z",
+  "observedAt": "2026-10-26T17:34:06.616Z",
   "checks": [
     {
       "check": "skill install copy",
@@ -47,7 +47,8 @@
     },
     {
       "check": "AI-approved command detail and full copy",
-      "passed": false
+      "passed": true,
+      "observed": "Initial clipboard read differed; after awaiting the explicit Copied button state, exact equality passed for all 1551 characters."
     },
     {
       "check": "single-type text submission",
