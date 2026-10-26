@@ -1,0 +1,129 @@
+{
+  "checkedAt": "2026-10-26T16:05:37.817Z",
+  "endpoint": "https://graceful-mandrill-120.convex.cloud",
+  "requestWindow": {
+    "beforeReadAt": "2026-10-26T16:03:19.072Z",
+    "afterReadAt": "2026-10-26T16:03:20.608Z"
+  },
+  "method": "Unauthenticated curl POSTs to the public Convex query/action/mutation HTTP API.",
+  "status": "passed",
+  "modelCalls": 0,
+  "before": {
+    "ids": [
+      "jd74wktj5a82x9kynyn7apk88x8h050c",
+      "jd769pn09y4m8kv69bm6h3bhjd8h072s",
+      "jd79nz4mgcvmtzmbjnqttbqf998h152a"
+    ],
+    "counts": {
+      "command": 0,
+      "mcp": 1,
+      "skill": 1,
+      "subagent": 1
+    },
+    "truncated": false
+  },
+  "cases": [
+    {
+      "name": "mcp-kind-excluded",
+      "http": 200,
+      "transportStatus": "success",
+      "status": "invalid",
+      "issues": [
+        "Choose a skill, subagent or command. MCP servers are curated by the library owner."
+      ],
+      "passed": true
+    },
+    {
+      "name": "relative-path-traversal",
+      "http": 200,
+      "transportStatus": "success",
+      "status": "invalid",
+      "issues": [
+        "Each file needs a safe relative path and text contents."
+      ],
+      "passed": true
+    },
+    {
+      "name": "duplicate-paths-case-insensitive",
+      "http": 200,
+      "transportStatus": "success",
+      "status": "invalid",
+      "issues": [
+        "File paths must be unique, including letter case."
+      ],
+      "passed": true
+    },
+    {
+      "name": "file-exceeds-48-kib",
+      "http": 200,
+      "transportStatus": "success",
+      "status": "invalid",
+      "issues": [
+        "Each file must contain 1 byte–48 KiB of text."
+      ],
+      "passed": true
+    },
+    {
+      "name": "command-has-multiple-files",
+      "http": 200,
+      "transportStatus": "success",
+      "status": "invalid",
+      "issues": [
+        "Commands and subagents require exactly one Markdown file."
+      ],
+      "passed": true
+    },
+    {
+      "name": "skill-missing-frontmatter",
+      "http": 200,
+      "transportStatus": "success",
+      "status": "invalid",
+      "issues": [
+        "SKILL.md needs YAML frontmatter with a lowercase hyphenated name and a 10–1024 character description."
+      ],
+      "passed": true
+    },
+    {
+      "name": "obvious-synthetic-credential-pattern",
+      "http": 200,
+      "transportStatus": "success",
+      "status": "invalid",
+      "issues": [
+        "Remove credentials or private keys before sharing this package."
+      ],
+      "passed": true
+    },
+    {
+      "name": "unauthenticated-internal-import",
+      "http": 200,
+      "transportStatus": "error",
+      "error": "[Request ID: aa64b063116847ba] Server Error",
+      "expected": "Unauthenticated invocation fails and creates no catalogue entry.",
+      "sourceRegistration": "convex/catalog.ts exports importEntry through internalMutation.",
+      "runtimeCause": "The public response redacts the server cause; it does not independently identify the visibility check.",
+      "passed": true
+    }
+  ],
+  "after": {
+    "ids": [
+      "jd74wktj5a82x9kynyn7apk88x8h050c",
+      "jd769pn09y4m8kv69bm6h3bhjd8h072s",
+      "jd79nz4mgcvmtzmbjnqttbqf998h152a"
+    ],
+    "counts": {
+      "command": 0,
+      "mcp": 1,
+      "skill": 1,
+      "subagent": 1
+    },
+    "truncated": false
+  },
+  "catalogueUnchanged": true,
+  "transportObservation": "Native Node fetch failed before issuing acceptance calls; curl was used successfully. No provider request or credential was involved in that failure.",
+  "boundaries": [
+    "Seven synthetic packages failed structural preflight before model dispatch.",
+    "The internal-import probe supplied otherwise valid curator arguments without authentication and failed. Source registers it as an internal mutation; the public response redacts the exact server cause.",
+    "No accepted entries or catalogue counters changed during this check window.",
+    "This verifies invalid-input handling and rejection of the unauthenticated import attempt, not model-review quality, every authorization path, or paid-provider behavior."
+  ]
+}

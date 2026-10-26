@@ -16,3 +16,11 @@ The product contract is in [spec.md](spec.md). Publication is not full acceptanc
 | Dedicated personal GitHub and Vercel | Remote source readback, READY deployment and public HTTP checks |
 
 Local Storage Guard measured 27.4 GiB free with 34.0 GiB required on 2026-10-26. No local dependency installation, app build or database provision was performed. The new Convex project is a hosted production resource, not a local test database.
+
+## Published release — 2026-10-26
+
+[Agent Library is live](https://agent-library-rust.vercel.app), with a dedicated public [GitHub repository](https://github.com/alvarovillalbaa/agent-library) and hosted Convex production database. The [release receipt](results/2026/10-26/release.md) links the source, deployment, live model-review, persistent catalogue, browser and invalid-submission evidence.
+
+The observed model path rejected the initial original command with eight checks and a repair prompt, then approved its revision with eight passing checks and persisted it. The browser verified that exact public command and copied its full contents. Three separately labelled curator entries complete the initial four-type collection. Seven invalid packages and an unauthenticated import attempt did not alter the catalogue.
+
+Navigation, search, combined filters, details, exact copying, mobile layout, text editing and the live duplicate-submission result were exercised in Chrome after explicit user approval. Native file/folder upload remains unverified: the browser connection failed during chooser file assignment and its supported guide requires a user extension-permission handoff. This is an open acceptance requirement, not a claimed pass. Cross-browser, full screen-reader, load and adversarial model evaluations remain outside these focused checks.

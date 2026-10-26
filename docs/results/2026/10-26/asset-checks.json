@@ -1,0 +1,18 @@
+{
+  "url": "https://agent-library-rust.vercel.app/",
+  "assets": [
+    {
+      "path": "/assets/index-C7HgD-hJ.js",
+      "bytes": 379484,
+      "sha256": "1bb23f5eb598a7bd1e4e42d0675683287585c9387635be300ccf3340202970e7",
+      "serverCredentialsAbsent": true
+    },
+    {
+      "path": "/assets/index-CfwJYqZH.css",
+      "bytes": 41606,
+      "sha256": "23f7d1d6b1acc79b4d2e6e045f89b1deb15952c6d99d8a6f5a645ecb6ec2c3bf",
+      "serverCredentialsAbsent": true
+    }
+  ],
+  "checks": "Compared exact deployment-key and relay-secret bytes against delivered JS/CSS; neither is present. This is not a general secret/security audit."
+}

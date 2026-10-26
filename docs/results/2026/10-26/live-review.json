@@ -1,0 +1,138 @@
+{
+  "model": "openai/gpt-4o-mini",
+  "method": "Live public Convex review action -> authenticated Vercel model relay -> Vercel AI Gateway OIDC",
+  "first": {
+    "status": "success",
+    "value": {
+      "checks": [
+        {
+          "fix": "",
+          "id": "format",
+          "issue": "",
+          "passed": true,
+          "title": "Valid format"
+        },
+        {
+          "fix": "",
+          "id": "purpose",
+          "issue": "",
+          "passed": true,
+          "title": "Useful business purpose"
+        },
+        {
+          "fix": "",
+          "id": "instructions",
+          "issue": "",
+          "passed": true,
+          "title": "Clear instructions"
+        },
+        {
+          "fix": "Provide a specific format or example for the comparison table to ensure uniformity in responses.",
+          "id": "completeness",
+          "issue": "The prompt does not specify formatting or structuring for the compact comparison table, which could lead to inconsistent outputs.",
+          "passed": false,
+          "title": "Complete package"
+        },
+        {
+          "fix": "",
+          "id": "permissions",
+          "issue": "",
+          "passed": true,
+          "title": "Appropriate permissions"
+        },
+        {
+          "fix": "",
+          "id": "safety",
+          "issue": "",
+          "passed": true,
+          "title": "Safe handling of data"
+        },
+        {
+          "fix": "",
+          "id": "portability",
+          "issue": "",
+          "passed": true,
+          "title": "Portable setup"
+        },
+        {
+          "fix": "",
+          "id": "attribution",
+          "issue": "",
+          "passed": true,
+          "title": "Source and license"
+        }
+      ],
+      "repairPrompt": "Revise my command \u201cCompare business options\u201d while preserving its intended business purpose.\n\nRequired fixes:\n1. Complete package: The prompt does not specify formatting or structuring for the compact comparison table, which could lead to inconsistent outputs.\n   Fix: Provide a specific format or example for the comparison table to ensure uniformity in responses.\n\nReturn the complete corrected files with their original relative paths. Do not include credentials, invent capabilities or claim unperformed verification. Keep the package ready for a fresh library review.",
+      "status": "changes_requested",
+      "summary": "This prompt is designed to help users compare various business options systematically, ensuring a structured approach to decision-making based on defined criteria. It outlines a clear methodology for evaluating options and formulating a recommendation."
+    }
+  },
+  "revised": {
+    "status": "success",
+    "value": {
+      "checks": [
+        {
+          "fix": "",
+          "id": "format",
+          "issue": "",
+          "passed": true,
+          "title": "Valid format"
+        },
+        {
+          "fix": "",
+          "id": "purpose",
+          "issue": "",
+          "passed": true,
+          "title": "Useful business purpose"
+        },
+        {
+          "fix": "",
+          "id": "instructions",
+          "issue": "",
+          "passed": true,
+          "title": "Clear instructions"
+        },
+        {
+          "fix": "",
+          "id": "completeness",
+          "issue": "",
+          "passed": true,
+          "title": "Complete package"
+        },
+        {
+          "fix": "",
+          "id": "permissions",
+          "issue": "",
+          "passed": true,
+          "title": "Appropriate permissions"
+        },
+        {
+          "fix": "",
+          "id": "safety",
+          "issue": "",
+          "passed": true,
+          "title": "Safe handling of data"
+        },
+        {
+          "fix": "",
+          "id": "portability",
+          "issue": "",
+          "passed": true,
+          "title": "Portable setup"
+        },
+        {
+          "fix": "",
+          "id": "attribution",
+          "issue": "",
+          "passed": true,
+          "title": "Source and license"
+        }
+      ],
+      "entrySlug": "alvarovillalbaa-compare-business-options-481ad8a0988a971d1ffa2ffd",
+      "repairPrompt": "",
+      "status": "approved",
+      "summary": "This command provides a structured approach for comparing multiple business options based on specific criteria, ensuring well-supported recommendations and appropriate next steps."
+    }
+  },
+  "boundary": "Native HTTP submission and revision; browser submission interaction is recorded separately. No review was fabricated. Curator imports are separate from this AI-reviewed command."
+}

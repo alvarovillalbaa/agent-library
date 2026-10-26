@@ -1,0 +1,78 @@
+{
+  "url": "https://agent-library-rust.vercel.app/",
+  "observedAt": "2026-10-26T17:30:25.619Z",
+  "checks": [
+    {
+      "check": "skill install copy",
+      "passed": true,
+      "observed": "Exact command read from clipboard after copied UI state"
+    },
+    {
+      "check": "detail information",
+      "passed": true,
+      "observed": "Pinned source,MIT,curator review,overview,best uses,considerations and complete SKILL.md visible"
+    },
+    {
+      "check": "search,area,creator filters",
+      "passed": true,
+      "observed": "Evidence search resolves to Evidence editor; Product+creator resolves Research brief"
+    },
+    {
+      "check": "MCP route",
+      "passed": true
+    },
+    {
+      "check": "subagent full-content copy",
+      "passed": true
+    },
+    {
+      "check": "commands empty state",
+      "passed": true,
+      "observed": "No command was fabricated before actual model publication"
+    },
+    {
+      "check": "mobile catalogue fit",
+      "passed": true,
+      "dimensions": {
+        "clientWidth": 390,
+        "scrollWidth": 390,
+        "width": 390
+      }
+    },
+    {
+      "check": "skill-folder chooser",
+      "passed": false,
+      "blocked": true,
+      "reason": "Browser extension reports debugger not attached; supported upload handoff requires file-URL access"
+    },
+    {
+      "check": "AI-approved command detail and full copy",
+      "passed": false
+    },
+    {
+      "check": "single-type text submission",
+      "passed": true,
+      "observed": "Command type and full file preserved; no browser publish click"
+    },
+    {
+      "check": "mobile submission fit and source link",
+      "passed": true,
+      "dimensions": {
+        "clientWidth": 390,
+        "scrollWidth": 390,
+        "width": 390
+      },
+      "sourceLinkNamed": true
+    },
+    {
+      "check": "browser submission action and duplicate handling",
+      "passed": true,
+      "observed": "Live action recognized exact published command; approved result and view link displayed, no new model review charged"
+    }
+  ],
+  "boundaries": [
+    "Native file/folder chooser blocked by browser extension access; no workaround attempted.",
+    "Live fresh-model rejection/resubmission/approval proved separately via public HTTP action. Browser submit checked exact-package deduplication.",
+    "Cross-browser and assistive-technology audits not performed."
+  ]
+}
