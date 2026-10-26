@@ -12,6 +12,8 @@
 
 The completed resource is retained as a useful authored public command, rather than a fabricated catalogue entry. Its source SHA-256 is `d84702d05efb76e4e1cebdad8b4f4f73dc307fca982ffbb98521d5d35d6de326`. It does not execute tools or send messages; none of its workflow instructions were executed during this check. [Machine-readable browser receipt](meeting-handoff-browser.json).
 
+Source and browser evidence were published in commit `6ef64debf3a41e9157303905b71212dc44a5ea43`. Its Git-backed Vercel production deployment `dpl_6cEvZBY3gZ2xihm3LKtKSzzM7nKq` reached `READY` with the Agent Library public aliases assigned. Hosted Convex deployment and Vite build completed. This publication adds the command and evidence; it changes no runtime application, review, auth, provider or CI code.
+
 ## Budget and limits
 
 This sequence used two additional bounded reviews, bringing the recorded successful review calls to four across the original HTTP sequence and this browser sequence. The provider route fixes the model to GPT-4o mini and caps each output at 3,000 tokens. At the [published Vercel prices](https://vercel.com/ai-gateway/models/gpt-4o-mini), even an intentionally loose bound of 128,000 input tokens plus 3,000 output tokens for **each of all four calls** is $0.084. Actual prompts were much smaller. This is a conservative estimate from the published token rates, not a retrieved invoice or verified billing total. No further review request was made in this check.
