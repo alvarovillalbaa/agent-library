@@ -12,7 +12,7 @@ Use the same decision criteria for every option. Inspect current primary sources
 Return:
 
 1. The decision and the criteria, in plain language.
-2. A compact comparison table, including material unknowns.
+2. A compact Markdown comparison table with these columns: Criterion, Option, Evidence, Source, and Unknowns. Use one row per option for each criterion, repeat the same criteria for every option, and write "Unknown" where evidence is missing. Include the relevant date, product tier or other constraint in the Evidence cell when it affects the comparison.
 3. Your recommendation and the conditions under which it would change.
 4. The cheapest useful next check before committing time or money.
 
