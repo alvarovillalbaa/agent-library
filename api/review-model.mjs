@@ -1,4 +1,5 @@
 import { timingSafeEqual } from 'node:crypto';
+import { getVercelOidcToken } from '@vercel/oidc';
 
 const MODEL = 'openai/gpt-4o-mini';
 const MAX_BODY_BYTES = 1024 * 1024;
@@ -21,8 +22,6 @@ export default async function reviewModel(request, response) {
     return response.status(405).json({ error: 'method_not_allowed' });
   }
   if (!authorized(request)) return response.status(401).json({ error: 'unauthorized' });
-  const token = process.env.AI_GATEWAY_API_KEY || process.env.VERCEL_OIDC_TOKEN;
-  if (!token) return response.status(503).json({ error: 'review_unavailable' });
   const body = request.body;
   if (!body || typeof body !== 'object' || Array.isArray(body)
     || Buffer.byteLength(JSON.stringify(body)) > MAX_BODY_BYTES
@@ -35,6 +34,14 @@ export default async function reviewModel(request, response) {
     || body.response_format?.json_schema?.strict !== true) {
     return response.status(400).json({ error: 'invalid_review_request' });
   }
+  let token;
+  try {
+    token = process.env.AI_GATEWAY_API_KEY || await getVercelOidcToken();
+  } catch {
+    console.warn(JSON.stringify({ event: 'review_auth_unavailable' }));
+    return response.status(503).json({ error: 'review_unavailable' });
+  }
+  if (!token) return response.status(503).json({ error: 'review_unavailable' });
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), 40_000);
   try {
