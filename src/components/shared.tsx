@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useLayoutEffect, useRef, useState } from 'react';
 import { ArrowRight, Blocks, Bot, Check, Copy, FileText, Plug, type LucideIcon } from 'lucide-react';
 import { Button } from './ui/button';
 import type { Kind } from '../types';
@@ -19,10 +19,20 @@ export function Mark({ small = false }: { small?: boolean }) {
 
 export function CopyButton({ text, label = 'Copy', className = '' }: { text: string; label?: string; className?: string }) {
   const [status, setStatus] = useState<'idle' | 'copied' | 'failed'>('idle');
-  useEffect(() => setStatus('idle'), [text]);
+  const requestId = useRef(0);
+  useLayoutEffect(() => {
+    setStatus('idle');
+    return () => { requestId.current += 1; };
+  }, [text]);
   return <span className={`copy-control ${className}`}><Button variant="secondary" size="small" onClick={async () => {
-    try { await navigator.clipboard.writeText(text); setStatus('copied'); }
-    catch { setStatus('failed'); }
+    const request = ++requestId.current;
+    setStatus('idle');
+    try {
+      await navigator.clipboard.writeText(text);
+      if (request === requestId.current) setStatus('copied');
+    } catch {
+      if (request === requestId.current) setStatus('failed');
+    }
   }} aria-label={status === 'copied' ? `${label}: copied` : label}>{status === 'copied' ? <Check size={14} aria-hidden="true" /> : <Copy size={14} aria-hidden="true" />}{status === 'copied' ? 'Copied' : label}</Button><span className="copy-message" role="status">{status === 'failed' ? 'Could not copy. Select the text instead.' : ''}</span></span>;
 }
 
