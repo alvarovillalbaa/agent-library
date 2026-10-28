@@ -51,9 +51,45 @@ mechanism was attempted. The [form screenshot](upload-retry.png) records the
 selected single-file path with an empty editor, not a successful upload.
 
 No review was submitted and no model call was made. The file/folder acceptance
-gap remains open. The prior browser receipts remain historical evidence;
-they do not verify this repair's timing in a real browser. Browser/React
-scheduling, screen-reader feedback and OS clipboard ordering remain unverified.
-No local build/install, backend test, schema/Auth/provider/CI/configuration
-change was needed. Source and hosted publication evidence will be added after
-delivery.
+gap remains open. No local build/install, backend test, schema/Auth/provider/CI/
+configuration change was needed.
+
+## Source and hosted delivery
+
+Source [`b48d131ae4568ffafc26138769236eaad9a44762`](https://github.com/alvarovillalbaa/agent-library/commit/b48d131ae4568ffafc26138769236eaad9a44762)
+was pushed to personal-repository main. Immutable GitHub readback matches the
+component blob `90893059a516723f19e501f56a97c7cd2691e8d2`.
+Vercel production [`dpl_7mrCXeUSUzqKgFo6A3dVgiqrsfyN`](https://vercel.com/my-team-4f230354/agent-library/7mrCXeUSUzqKgFo6A3dVgiqrsfyN)
+reached READY at that exact SHA with the public aliases assigned. Logs show the
+existing hosted Convex deployment and Vite 8.3.5 build completed, with build
+output completed in 13 seconds. This is publication, not a backend regression
+or model-review test.
+
+Homepage GET returned 200 (1,016 bytes). Its client asset
+`/assets/index-D_30NTVw.js` returned 200 (379,696 bytes), SHA256
+`e88cd0cd0ffe69b417fb2a1f8bc9b244e4d7d152a15017b5f10f314f38572c3e`.
+The delivered copy function contains layout cleanup, attempt increment and both
+completion guards. Chrome's loaded page references this same asset.
+
+## Limited live copy check
+
+On the new deployment, the existing published Meeting handoff detail loaded.
+Its expanded, visible file matches the original 2,316-character / 2,328-byte
+source exactly (SHA256
+`d84702d05efb76e4e1cebdad8b4f4f73dc307fca982ffbb98521d5d35d6de326`).
+Clicking Copy command produced “Copy command: copied” while retaining focus on
+that button. The [screenshot](copy-feedback-browser.png) records the visible
+feedback, not clipboard-content acceptance.
+
+The connector's clipboard read returned an empty string. A normal Command-V
+in a disposable, unsubmitted form also failed because Browser Use reported
+its virtual clipboard had no data. Supported browser troubleshooting was read.
+Therefore exact current OS-clipboard readback is **unverified**, despite the
+successful UI state and exact callback payload checks. No claim is made that
+the empty connector read proves an application clipboard failure. No review,
+model call or production write occurred during this check.
+
+The earlier exact-copy browser receipts remain historical evidence. Real
+overlapping-request/text-change timing, screen-reader feedback and OS clipboard
+ordering remain unverified. The later receipt-only publication preserves the
+checked runtime component bytes.
