@@ -93,3 +93,17 @@ The earlier exact-copy browser receipts remain historical evidence. Real
 overlapping-request/text-change timing, screen-reader feedback and OS clipboard
 ordering remain unverified. The later receipt-only publication preserves the
 checked runtime component bytes.
+
+## Later native-upload recheck
+
+A later 28 October continuation reused the connected Chrome session and opened
+the published `/submit` form. Command selection and the native single-file
+chooser worked; the chooser reported `multiple:false`. Assigning the same
+authored `resources/commands/meeting-handoff.md` again returned the extension's
+“Allow access to file URLs” error before content reached the editor. The
+supported Chrome troubleshooting was read. The prior permission handoff did
+not establish working assignment in this controlled session.
+
+No submission, review, provider/model call or catalogue mutation occurred.
+The file/folder acceptance requirement remains open; this repeat does not
+establish an application upload defect or a passing upload check.
