@@ -31,3 +31,10 @@ The [28 October copy-feedback repair and upload retry](results/2026/10-28/copy-f
 records focused callback checks for stale clipboard feedback. The connected
 Chrome file chooser still rejected file assignment with its file-URL access
 error. File/folder acceptance and real-browser timing checks remain open.
+
+The [30 October readiness check](results/2026/10-30/native-upload-readiness.md)
+found no browser exposed to the current task, despite passing Chrome/extension/
+native-host diagnostics. The supported blank-window recovery awaits permission.
+Authored file/folder fixtures are prepared; no chooser or model call was retried.
+The original focused-check approval remains valid, with no inferred remaining
+model budget from the earlier price estimate.

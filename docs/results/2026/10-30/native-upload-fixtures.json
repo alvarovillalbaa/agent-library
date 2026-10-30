@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-30",
+  "status": "prepared-unrun",
+  "baselineCommit": "36f5a5ee4b3caf9f88662cba5c51c45e20bcc4d8",
+  "approvalQuestionId": "call_4579c4e11bfc4a13a99d69b8d07269c8",
+  "browserCheckExecuted": false,
+  "additionalModelCalls": 0,
+  "catalogueMutations": 0,
+  "recovery": {
+    "chromeInstalled": true,
+    "chromeRunning": true,
+    "extensionInstalledAndEnabled": true,
+    "nativeHostChecksPassed": true,
+    "browserInstancesExposed": 0,
+    "windowDryRunPrepared": true,
+    "windowOpened": false,
+    "windowPermission": "requested-pending"
+  },
+  "cases": [
+    {
+      "id": "command-single-file",
+      "files": [
+        "resources/commands/meeting-handoff.md"
+      ]
+    },
+    {
+      "id": "subagent-single-file",
+      "files": [
+        "resources/subagents/evidence-editor.md"
+      ]
+    },
+    {
+      "id": "skill-multiple-files",
+      "files": [
+        "docs/fixtures/native-upload/decision-brief/SKILL.md",
+        "docs/fixtures/native-upload/decision-brief/LICENSE"
+      ]
+    },
+    {
+      "id": "skill-directory",
+      "directory": "docs/fixtures/native-upload/decision-brief",
+      "expectedFilePaths": [
+        "SKILL.md",
+        "LICENSE",
+        "references/criteria.md"
+      ]
+    }
+  ],
+  "files": [
+    {
+      "sourcePath": "resources/commands/meeting-handoff.md",
+      "submissionKind": "command",
+      "expectedFilePath": "meeting-handoff.md",
+      "bytes": 2328,
+      "characters": 2316,
+      "sha256": "d84702d05efb76e4e1cebdad8b4f4f73dc307fca982ffbb98521d5d35d6de326"
+    },
+    {
+      "sourcePath": "resources/subagents/evidence-editor.md",
+      "submissionKind": "subagent",
+      "expectedFilePath": "evidence-editor.md",
+      "bytes": 2029,
+      "characters": 2029,
+      "sha256": "52deb544d95cd79da158b14ba95d079638de4e861db73e9dbf3fcf01c56ab470"
+    },
+    {
+      "sourcePath": "docs/fixtures/native-upload/decision-brief/SKILL.md",
+      "submissionKind": "skill",
+      "expectedFilePath": "SKILL.md",
+      "bytes": 981,
+      "characters": 978,
+      "sha256": "c3b1396f8ceb6687fc48a5c22f24569d0ed025f7cbfff1564f2768f829d11467"
+    },
+    {
+      "sourcePath": "docs/fixtures/native-upload/decision-brief/LICENSE",
+      "submissionKind": "skill",
+      "expectedFilePath": "LICENSE",
+      "bytes": 1072,
+      "characters": 1072,
+      "sha256": "7edafcd8ebca4ecabedfad6e3c3d4872ce0ef6b49c3658a8b6e644cfb884d32d"
+    },
+    {
+      "sourcePath": "docs/fixtures/native-upload/decision-brief/references/criteria.md",
+      "submissionKind": "skill",
+      "expectedFilePath": "references/criteria.md",
+      "bytes": 488,
+      "characters": 483,
+      "sha256": "e50fb32ddd3ddd339f5e8d2b82476d3058d24e9433cf06a0b380ea3067373edc"
+    }
+  ],
+  "skillTotalBytes": 2541,
+  "licenseEqualsRepository": true
+}
